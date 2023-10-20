@@ -66,7 +66,7 @@ func unpackedFileName(path string) string {
 func init() {
 	rootCmd.AddCommand(unpackCmd)
 
-	packCmd.Flags().StringP("method", "m", "", "decompression method: vlc ")
+	unpackCmd.Flags().StringP("method", "m", "", "decompression method: vlc ")
 	if err := packCmd.MarkFlagRequired("method"); err != nil {
 		panic(err)
 	}
