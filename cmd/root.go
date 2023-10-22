@@ -12,11 +12,11 @@ var rootCmd = &cobra.Command{
 
 func Execute() {
 	if err := rootCmd.Execute(); err != nil {
-		handelErr(err)
+		HandleErr(err)
 	}
 }
 
-func handelErr(err error) {
+func HandleErr(err error) {
 	_, _ = fmt.Fprintln(os.Stderr, err)
 	os.Exit(1)
 }
